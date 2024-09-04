@@ -50,3 +50,15 @@ const questions = [
         correctAnswer: 1 
     }
 ];
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function loadQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    document.getElementById('question').textContent = currentQuestion.question;
+    document.getElementById('choice1').textContent = currentQuestion.choices[0];
+    document.getElementById('choice2').textContent = currentQuestion.choices[1];
+    document.getElementById('choice3').textContent = currentQuestion.choices[2];
+    document.getElementById('choice4').textContent = currentQuestion.choices[3];
+}
